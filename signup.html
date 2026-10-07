@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Signup Form</title>
+   </head>
+   <body>
+      <h2>Signup Form</h2>
+      <form action="submit.php" method="post">
+         <label for="name">Name:</label><br>
+         <input type="text" id="name" name="name" required><br><br>
+
+         <label for="email">Email:</label><br>
+         <input type="email" id="email" name="email" required><br><br>
+
+         <label for="website">Website:</label><br>
+         <input type="url" id="website" name="website"><br><br>
+
+         <label for="comment">Comment:</label><br>
+         <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
+
+         <label>Gender:</label><br>
+         <input type="radio" id="female" name="gender" value="female" required>
+         <label for="female">Female</label><br>
+         <input type="radio" id="male" name="gender" value="male">
+         <label for="male">Male</label><br>
+         <input type="radio" id="other" name="gender" value="other">
+         <label for="other">Other</label><br><br>
+         
+         <input type="submit" value="Submit">
+      </form>
+   </body>
+</html>
