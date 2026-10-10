@@ -53,21 +53,10 @@ Git & GitHub:-version control and project hosting
 
 # 🏗️ Architecture Diagram (AWS)
 
+<img width="1408" height="768" alt="WhatsApp Image 2026-10-10 at 16 13 03" src="https://github.com/user-attachments/assets/b7501f3c-2e0b-450b-a8a6-e4737b879660" />
 
-flowchart LR
-    U["👤 User<br/>(Browser)"] -->|"HTTP : 80"| IGW["Internet Gateway"]
 
-    subgraph AWS["☁️ AWS Cloud - us-east-1 (N. Virginia)"]
-        IGW --> SG["🛡️ Security Group<br/>SSH 22 / HTTP 80"]
-        subgraph VPC["Default VPC / Public Subnet (us-east-1d)"]
-            SG --> EC2
-            subgraph EC2["🖥️ EC2 Instance (t3.micro)"]
-                N["Nginx<br/>Web Server"] -->|"FastCGI"| P["PHP-FPM<br/>submit.php"]
-                P -->|"php-mysqlnd"| D[("MariaDB<br/>DB: FCT / Table: users")]
-            end
-        end
-    end
-Flow: User → Internet → Security Group → Nginx → PHP-FPM → MariaDB → Response back to user.
+### Flow: User → Internet → Security Group → Nginx → PHP-FPM → MariaDB → Response back to user.
 
 
 # ⚙️ Setup & Installation (on EC2 Server)
