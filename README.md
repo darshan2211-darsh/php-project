@@ -80,6 +80,9 @@ Security Group: allow SSH (22) and HTTP (80)
 ssh -i my-key.pem ec2-user@<EC2-PUBLIC-IP>
 ## Install packages
 sudo yum update
+
+
+
 sudo yum install nginx  mariadb105-server php -y
 
 
