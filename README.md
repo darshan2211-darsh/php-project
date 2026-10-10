@@ -106,7 +106,7 @@ cd /usr/share/nginx/html
 
 
 7. clone the files
-   sudo git clone <>
+   sudo git clone https://github.com/darshan2211-darsh/php-project.git
 ## copy signup.html and submit.php into php-project/
 8. Restart services
 sudo systemctl restart nginx php-fpm
